@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Casa</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    
+    <div class="row"  align = center>
+      <div class="large-12 columns">
+        <h1>Projeto Casa</h1>
+      </div>
+    </div>
+     <hr />
+    
+    <div class="row">
+      <div class="large-3 small-12 columns">
+
+       <button class="round"  onclick="ligarSala()" id="sala" type="Button">Sala On</button>
+       <button class="round" onclick="ligarSala2()" id="sala2" type="Button">Sala Off</button> 
+      </div>
+       <div class="large-3 small-12 columns">
+       <button class="round" onclick="ligarQuarto()" id="quarto" type="Button">Quarto On</button>
+       <button class="round" onclick="ligarQuarto2()" id="quarto2" type="Button">Quarto Off</button> 
+      </div>
+       <div class="large-3 small-12 columns">
+       <button class="round" onclick="ligarBanheiro()" id="banheiro" type="Button">Banheiro On</button>
+       <button class="round" onclick="ligarBanheiro2()" id="banheiro2" type="Button">Banheiro Off</button> 
+      </div>
+       <div class="large-3 small-12 columns">
+       <button class="round" onclick="ligarCozinha()" id="cozinha" type="Button">Cozinha On</button>
+       <button class="round" onclick="ligarCozinha2()" id="cozinha2" type="Button">Cozinha Off</button> 
+      </div>
+    </div>
+    <br>
+    <hr />
+	<div class="row">
+	<div class="large-3 small-12 columns" align="Center" >
+        <h4>Modos</h4>
+
+    
+       <button class="round" onclick="ligarModoCinema()" id="ModoCinema" type="Button">Cinema On</button>
+       <button class="round" onclick="ligarModoCinema2()" id="ModoCinema2" type="Button">Cinema Off</button> 
+    </div>
+	</div>
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script>
+    function ligarSala(){
+      $.getJSON("http://192.168.25.178/?button1on",function(data){});
+    }
+    function ligarSala2(){
+      $.getJSON("http://192.168.25.178/?button1off",function(data){});
+    }
+    function ligarQuarto(){
+      $.getJSON("http://192.168.25.178/?button2on",function(data){});
+    }
+    function ligarQuarto2(){
+      $.getJSON("http://192.168.25.178/?button2off",function(data){});
+    }
+    function ligarBanheiro(){
+      $.getJSON("http://192.168.25.178/?button3on",function(data){});
+    }
+    function ligarBanheiro2(){
+      $.getJSON("http://192.168.25.178/?button3off",function(data){});
+    }
+    function ligarCozinha(){
+      $.getJSON("http://192.168.25.178/?button4on",function(data){});
+    }
+    function ligarCozinha2(){
+      $.getJSON("http://192.168.25.178/?button4off",function(data){});
+    }
+
+
+    function ligarModoCinema(){
+      $.getJSON("http://192.168.25.178/?button5on",function(data){});
+    }
+    function ligarModoCinema2(){
+      $.getJSON("http://192.168.25.178/?button5off",function(data){});
+    }
+    
+    </script>
+
+  </body>
+</html>
