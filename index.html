@@ -17,22 +17,20 @@
      <hr />
     
     <div class="row">
-      <div class="large-3 small-12 columns">
-
-       <button class="round"  onclick="ligarSala()" id="sala" type="Button">Sala On</button>
-       <button class="round" onclick="ligarSala2()" id="sala2" type="Button">Sala Off</button> 
+      <div class="large-3 small-6 columns">
+       <button class="round"  onclick="ligarSala()" id="sala" type="Button">Sala</button>
       </div>
-       <div class="large-3 small-12 columns">
-       <button class="round" onclick="ligarQuarto()" id="quarto" type="Button">Quarto On</button>
-       <button class="round" onclick="ligarQuarto2()" id="quarto2" type="Button">Quarto Off</button> 
+       <div class="large-3 small-6 columns">
+       <button class="round" onclick="ligarQuarto()" id="quarto" type="Button">Quarto</button>
+       
       </div>
-       <div class="large-3 small-12 columns">
-       <button class="round" onclick="ligarBanheiro()" id="banheiro" type="Button">Banheiro On</button>
-       <button class="round" onclick="ligarBanheiro2()" id="banheiro2" type="Button">Banheiro Off</button> 
+       <div class="large-3 small-6 columns">
+       <button class="round" onclick="ligarBanheiro()" id="banheiro" type="Button">Banheiro</button>
+       
       </div>
-       <div class="large-3 small-12 columns">
-       <button class="round" onclick="ligarCozinha()" id="cozinha" type="Button">Cozinha On</button>
-       <button class="round" onclick="ligarCozinha2()" id="cozinha2" type="Button">Cozinha Off</button> 
+       <div class="large-3 small-6 columns">
+       <button class="round" onclick="ligarCozinha()" id="cozinha" type="Button">Cozinha</button>
+       
       </div>
     </div>
     <br>
@@ -53,9 +51,18 @@
       $(document).foundation();
     </script>
     <script>
-    function ligarSala(){
-      $.getJSON("http://192.168.25.178/?button1on",function(data){});
+
+
+
+    
+  function ligarSala(){
+      $.getJSON("http://192.168.25.178/?button1on", function( data ){
+        console.log(data);
+      });
     }
+
+  
+    
     function ligarSala2(){
       $.getJSON("http://192.168.25.178/?button1off",function(data){});
     }
