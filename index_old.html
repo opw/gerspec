@@ -18,17 +18,10 @@
     
     <div class="row">
       <div class="large-3 small-6 columns">
-
        <button class="round"  onclick="ligarSala()" id="sala" type="Button">Sala</button>
-       
       </div>
        <div class="large-3 small-6 columns">
        <button class="round" onclick="ligarQuarto()" id="quarto" type="Button">Quarto</button>
-       
-      </div>
-	  
-	  <div class="large-3 small-6 columns">
-       <button class="round" onclick="ligarQuarto2()" id="quarto2" type="Button">Quarto 2</button>
        
       </div>
        <div class="large-3 small-6 columns">
@@ -63,7 +56,9 @@
 
     
   function ligarSala(){
-      $.getJSON("http://192.168.25.178/?button1on", function(data){});
+      $.getJSON("http://192.168.25.178/?button1on", function( data ){
+        console.log(data);
+      });
     }
 
   
@@ -75,7 +70,7 @@
       $.getJSON("http://192.168.25.178/?button2on",function(data){});
     }
     function ligarQuarto2(){
-      $.getJSON("http://192.168.25.178/?button6on",function(data){});
+      $.getJSON("http://192.168.25.178/?button2off",function(data){});
     }
     function ligarBanheiro(){
       $.getJSON("http://192.168.25.178/?button3on",function(data){});
